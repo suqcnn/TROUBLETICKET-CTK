@@ -8,5 +8,6 @@ echo "NodeJS, NMP and Newman installed."
 echo
 
 
-newman -c TroubleTicket.postman_collection -e TMFENV --requestTimeout 1000 -H TroubleTicketCTK.html -o TroubleTicketOut.json 
+newman run TroubleTicket.postman_collection -e TMFENV --reporters cli,json,html --reporter-json-export outputfile.json --reporter-html-export outputfile.html
+
 
